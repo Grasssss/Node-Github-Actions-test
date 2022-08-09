@@ -1,8 +1,4 @@
 {
-  "scripts": {
-    "test": "mocha",
-    "dev": "nodemon index.js"
-  },
   "dependencies": {
     "mongodb": "^4.8.1"
   }
