@@ -1,8 +1,11 @@
-var http = require('http');
-
-http.createServer(function(request, response) {
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.end('Hello World\n');
-}).listen(8124);
-
-console.log('Server running at heep://127.0.0.1:8124/');
+const MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb://localhost:27017';
+const dbName = 'test';
+const client = new MongoClient(url, { useUnifiedTopology: true});
+client.connect(function(err) {
+  if(err) {
+    console.log(err);
+    return;
+  }
+  console.log("success");
+})
